@@ -5,20 +5,24 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
-  "files":[
+  "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/C5m7b4/mb-lib"
+  },
   "scripts": {
     "build": "rm -rf dist && rollup -c",
     "test": "jest",
-    "lint" : " eslint ./src/*.ts",
+    "lint": " eslint ./src/*.ts",
     "test:coverage": "jest --coverage",
     "view:coverage": "start coverage/lcov-report/index.html",
     "test:watch": "jest --watch"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "C5m7b4",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.20.7",
     "@babel/preset-env": "^7.20.2",
@@ -26,6 +30,12 @@
     "@rollup/plugin-commonjs": "^24.0.0",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.47.1",
+    "@typescript-eslint/parser": "^5.47.1",
+    "eslint": "^8.30.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-typescript": "^0.14.0",
     "prettier": "^2.8.1",
     "rollup": "^3.9.0",
     "rollup-plugin-dts": "^5.1.0",
