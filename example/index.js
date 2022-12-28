@@ -10,3 +10,19 @@ const items = Box(data)
   .fold((x) => x);
 
 console.log(items);
+
+import { Maybe, prop, append } from '../src';
+
+const badInput = Maybe.just({});
+console.log(badInput.extract());
+
+const appendC = Maybe.chain(prop('b'), prop('c'), append(' is great'));
+const goodInput = Maybe.just({
+  b: {
+    c: 'fp',
+  },
+});
+
+console.log(appendC(goodInput).extract());
+const result = appendC(badInput);
+console.log(result.extract());
