@@ -1,12 +1,15 @@
 import { data } from '../tests/data';
-import { Box } from '../src';
+import { Box, trace } from '../src';
 
 const items = Box(data)
   .map((x) => x.filter((i) => i.dept === 1))
+  .map((x) => trace('after dept')(x))
   .map((x) => x.filter((i) => i.vendor === 1))
   .map((x) => x.filter((i) => i.category === 1))
   .map((x) => x.filter((i) => i.price > 2.0))
+  .map((x) => trace('after > 2')(x))
   .map((x) => x.filter((i) => i.price < 3.0))
+  .map((x) => trace('after < 3')(x))
   .fold((x) => x);
 
 console.log(items);
