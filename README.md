@@ -4,14 +4,14 @@ this is a small utility package for testing creating npm packages
 
 These are the current functions in the library
 
-- append
-- Box
-- compose
-- curry
-- Maybe
-- prop
-- Queue
-- Stack
+- [append](#append)
+- [Box](#box)
+- [compose](#compose)
+- [curry](#curry)
+- [Maybe](#maybe)
+- [prop](#prop)
+- [Queue](#queue)
+- [Stack](#stack)
 
 ## append
 
