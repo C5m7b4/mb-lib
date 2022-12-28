@@ -4,12 +4,22 @@ this is a small utility package for testing creating npm packages
 
 These are the current functions in the library
 
+- append
 - Box
 - compose
 - curry
+- Maybe
+- prop
 - Queue
 - Stack
 
+## append
+
+This function just appends two strings
+
+```js
+    expect(append('thing')('some')).toEqual('something');
+```
 
 ## Box
 
@@ -49,6 +59,28 @@ This function can be used like Partial Application. You can lazily load argument
     const fn1 = curriedSum(4);
     const result = fn1(5);
     expect(result).toEqual(9);
+```
+
+## prop
+
+This function gets a property from an object
+
+```js
+    const fn1 = prop('name');
+    const result = fn1(obj);
+    expect(result).toEqual('mike');
+```
+
+## Maybe
+
+This monad can be used when a null value could be expected from data received from a server
+
+```js
+    const maybeNumberOne = Maybe.just(5);
+    const maybeNumberTwo = Maybe.nothing();
+
+    expect(maybeNumberOne.isNothing()).toBeFalsy();
+    expect(maybeNumberTwo.isNothing()).toBeTruthy();
 ```
 
 ## Queue
