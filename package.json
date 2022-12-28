@@ -1,5 +1,5 @@
 {
-  "name": "mb-lib",
+  "name": "mb-fp-lib",
   "version": "0.0.1",
   "description": "small typescript library",
   "main": "dist/cjs/index.js",
@@ -20,7 +20,7 @@
     "view:coverage": "start coverage/lcov-report/index.html",
     "test:watch": "jest --watch"
   },
-  "keywords": [],
+  "keywords": ["typescript", "library", "fp"],
   "author": "C5m7b4",
   "license": "MIT",
   "devDependencies": {

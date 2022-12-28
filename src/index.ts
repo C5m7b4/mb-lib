@@ -3,7 +3,7 @@ import { Box } from './Box';
 import { compose } from './compose';
 import { curry } from './curry';
 import { Maybe } from './Maybe';
-import { append, prop } from './utils';
+import { append, prop, trace } from './utils';
 import { Queue } from './Queue';
 import { Stack } from './Stack';
 
@@ -22,4 +22,5 @@ export {
   prop,
   Queue,
   Stack,
+  trace,
 };
