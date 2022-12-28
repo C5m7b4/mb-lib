@@ -1,4 +1,8 @@
 export * from './math';
+import { curry } from './curry';
+import { compose } from './compose';
+import { Box } from './Box';
 
 console.log('ready to code');
-const unused = 1;
+
+export { curry, compose, Box };
